@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,7 +14,7 @@ public class  SignUp {
         this.username = setUsername(scan);
         this.password = setPassword(scan);
         map.put(username,password);
-        System.out.println("Account Successfully Created!");
+        System.out.println("Account Successfully Created");
     }
     public HashMap<String, String> getUser(){
         return this.map;
@@ -24,7 +23,7 @@ public class  SignUp {
     public String setUsername(Scanner scan) {
 
         while (true) {
-            System.out.println("Set username:");
+            System.out.print("Set username:");
             username = scan.nextLine();
             if (map.containsKey(this.username)) {
                 System.out.println("username already exists!");
@@ -38,8 +37,13 @@ public class  SignUp {
 
     public String setPassword(Scanner scan) {
         while (true) {
-            System.out.println("Password must contain\none uppercase!\none lowercase!\none number!\nminimum password length is 8 characters!");
-            System.out.println("Set password:");
+            System.out.println("Password must contain " +
+                    "one uppercase, " +
+                    "one lowercase, " +
+                    "one number, " +
+                    "minimum password length is 8 characters."
+            );
+            System.out.print("Set password:");
             password = scan.nextLine();
             Pattern p = Pattern.compile(regex);
             Matcher m = p.matcher(password);

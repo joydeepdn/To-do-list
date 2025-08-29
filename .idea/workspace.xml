@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9ff7ed9-b8a9-4b1b-b824-f4438412ea6d" name="Changes" comment="" />
+    <list default="true" id="d9ff7ed9-b8a9-4b1b-b824-f4438412ea6d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../To Do List/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../To Do List/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../To Do List/src/SignIn.java" beforeDir="false" afterPath="$PROJECT_DIR$/../To Do List/src/SignIn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../To Do List/src/SignUp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../To Do List/src/SignUp.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +20,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../To Do List" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -29,6 +36,8 @@
   "keyToString": {
     "Application.Main.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/JOYDEEP/IdeaProjects/atm-simulation",
     "onboarding.tips.debug.path": "C:/Users/JOYDEEP/IdeaProjects/To Do List/src/Main.java"
