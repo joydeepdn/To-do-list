@@ -28,4 +28,17 @@ public class SignIn {
             }
         }
     }
+    public void toDoList(Scanner scan){
+
+        ArrayList<String> task = new ArrayList<>();
+        String str;
+        System.out.println("Enter your tasks");
+
+        do {
+            System.out.print(":");
+            task.add(scan.nextLine());
+            System.out.println("press Any Key to add more or, N to Exit");
+            str = scan.nextLine();
+        } while (!Objects.equals(str, "N") && !Objects.equals(str, "n"));
+    }
 }
