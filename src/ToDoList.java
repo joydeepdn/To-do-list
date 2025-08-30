@@ -46,11 +46,10 @@ public class ToDoList {
             System.out.print(":");
             userInput = scan.nextLine();
             m = p.matcher(userInput);
-            if (m.matches() && Integer.parseInt(userInput) <= tasks.toArray().length) {
+            if (m.matches() && Integer.parseInt(userInput) <= tasks.size()) {
                 int index = Integer.parseInt(userInput);
-                index--;
                 tasks.remove(index);
-            } else if ((!Objects.equals(userInput, "n") || !Objects.equals(userInput, "N"))){
+            } else if (!(Objects.equals(userInput, "n") || Objects.equals(userInput, "N"))){
                break;
             }
             else {
