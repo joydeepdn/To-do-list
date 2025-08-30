@@ -38,8 +38,8 @@ public class  SignUp {
     public String setPassword(Scanner scan) {
         while (true) {
             System.out.println("Password must contain " +
-                    "one uppercase, " +
-                    "one lowercase, " +
+                    "one uppercase letter, " +
+                    "one lowercase letter, " +
                     "one number, " +
                     "minimum password length is 8 characters."
             );
