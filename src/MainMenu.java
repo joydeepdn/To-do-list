@@ -9,14 +9,20 @@ class MainMenu {
     public void mainMenu(Scanner scan){
         String userInput;
         System.out.println("\nHello and Welcome!");
+        label:
         while (true) {
-            System.out.println("\n1=>Sign-Up\n2=>Sign-In\n3=>Exit");
+            System.out.println("\n1->Sign-Up\n2->Sign-In\n3->Exit");
             System.out.print(":");
             userInput = scan.nextLine();
-            if(Objects.equals(userInput, "1")){su.setUser(scan);}
-            else if (Objects.equals(userInput, "2")) {si.signIn(scan,su);}
-            else if(Objects.equals(userInput, "3")) {break;}
-            else {System.out.println("Invalid Input!");}
+            switch (userInput) {
+                case "1": su.setUser(scan);
+                break;
+                case "2": si.signIn(scan, su);
+                break;
+                case "3": break label;
+                default: System.out.println("Invalid Input!");
+                break;
+            }
         }
     }
 }

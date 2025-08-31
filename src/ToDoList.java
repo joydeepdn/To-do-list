@@ -11,14 +11,21 @@ public class ToDoList {
 
     public void mainScreen(Scanner scan) {
         String userInput;
+        label:
         while (true) {
-            System.out.println("1.Add Tasks\n2.Review Tasks\n3.Accomplished Tasks\n4.Exit to main menu");
+            System.out.println("\n1.Add Tasks\n2.Review Tasks\n3.Accomplished Tasks\n4.Exit to main menu");
             userInput = scan.nextLine();
-            if (Objects.equals(userInput, "1")) {setTasks(scan);}
-            else if (Objects.equals(userInput, "2")) {getTasks();}
-            else if (Objects.equals(userInput,"3")) {removeTasks(scan);}
-            else if (Objects.equals(userInput, "4")) {break;}
-            else {System.out.println("Invalid Input");}
+            switch (userInput) {
+                case "1": setTasks(scan);
+                break;
+                case "2": getTasks();
+                break;
+                case "3": removeTasks(scan);
+                break;
+                case "4": break label;
+                default: System.out.println("Invalid Input!");
+                break;
+            }
         }
     }
 
@@ -34,7 +41,9 @@ public class ToDoList {
 
 
     public void getTasks() {
-        System.out.println(tasks);
+        for (int i = 0; i<tasks.size();i++){
+            System.out.println(i+"."+tasks.get(i));
+        }
     }
     public void removeTasks(Scanner scan){
         String regex = "^[0-9]+$";
@@ -52,9 +61,10 @@ public class ToDoList {
             } else if ((Objects.equals(userInput, "n") || Objects.equals(userInput, "N"))){
                break;
             }
-            else {
-                System.out.println("Make sure you enter the correct serial number!");
+            else if (Integer.parseInt(userInput) > tasks.size()) {
+                System.out.println("Ensure you enter the proper serial number!");
+            }
+                System.out.println("Invalid Input!");
             }
         }
     }
-}
