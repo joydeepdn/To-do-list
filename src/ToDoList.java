@@ -12,7 +12,7 @@ public class ToDoList {
     public void mainScreen(Scanner scan) {
         String userInput;
         while (true) {
-            System.out.println("1.Add Tasks\n2.Review Tasks\n3.Back to mainMenu");
+            System.out.println("1.Add Tasks\n2.Review Tasks\n3.Accomplished Tasks\n4.Exit to main menu");
             userInput = scan.nextLine();
             if (Objects.equals(userInput, "1")) {setTasks(scan);}
             else if (Objects.equals(userInput, "2")) {getTasks();}
@@ -49,7 +49,7 @@ public class ToDoList {
             if (m.matches() && Integer.parseInt(userInput) <= tasks.size()) {
                 int index = Integer.parseInt(userInput);
                 tasks.remove(index);
-            } else if (!(Objects.equals(userInput, "n") || Objects.equals(userInput, "N"))){
+            } else if ((Objects.equals(userInput, "n") || Objects.equals(userInput, "N"))){
                break;
             }
             else {

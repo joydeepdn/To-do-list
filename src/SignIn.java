@@ -15,9 +15,10 @@ public class SignIn {
         System.out.println(map2);
 
         while (true) {
+            System.out.println();
             System.out.print("Enter username:");
             username = scan.nextLine();
-            System.out.print("Enter password");
+            System.out.print("Enter password:");
             password = scan.nextLine();
             if(map2.containsKey(this.username) && map2.containsValue(this.password)){
                 to.mainScreen(scan);
