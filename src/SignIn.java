@@ -12,7 +12,6 @@ public class SignIn {
     public void signIn(Scanner scan,SignUp su) {
         String input = null;
         HashMap<String, String> map2 = su.getUser();
-        System.out.println(map2);
 
         while (true) {
             System.out.println("1.Enter username and password\n2.or SignUp");
@@ -29,6 +28,7 @@ public class SignIn {
             }
             else if (Objects.equals(input,"2")){
                 su.setUser(scan);
+                break;
             }
             else {
                 System.out.println("Invalid Input!");
