@@ -15,11 +15,6 @@ public class SignIn {
         System.out.println(map2);
 
         while (true) {
-            /*System.out.println();
-            System.out.print("Enter username:");
-            username = scan.nextLine();
-            System.out.print("Enter password:");
-            password = scan.nextLine();*/
             System.out.println("1.Enter username and password\n2.or SignUp");
             input = scan.nextLine();
             if(Objects.equals(input, "1")){
@@ -33,7 +28,10 @@ public class SignIn {
                 break;
             }
             else if (Objects.equals(input,"2")){
-
+                su.setUser(scan);
+            }
+            else {
+                System.out.println("Invalid Input!");
             }
         }
     }
